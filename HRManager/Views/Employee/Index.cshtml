@@ -1,0 +1,16 @@
+﻿@model HrManagerUserViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2 style="color:red">@Model?.UserName</h2>
+
+<span>Department Name</span>
+
+
+<form asp-action="UpdateDepartment" method="post">
+    <input type="text" asp-for="@Model!.DepartmentName" />
+    <button type="submit" asp-action="UpdateDepartment">Save</button>
+</form>
